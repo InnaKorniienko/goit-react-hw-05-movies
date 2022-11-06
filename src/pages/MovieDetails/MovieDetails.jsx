@@ -1,5 +1,5 @@
 import { Outlet, useParams, useNavigate, Link, useLocation } from "react-router-dom"
-import { useState, useEffect } from "react"
+import { useState, useEffect, Suspense } from "react"
 import { getMovieDetails } from "shared/Api/Api";
 import Loader from "components/Loader/Loader";
 import css from "./MovieDetails.module.css";
@@ -69,7 +69,9 @@ const reviewLink = isReviewDetails ? `/movies/${movieId}` : `/movies/${movieId}/
             </div>
         </div>
         )}
+        <Suspense fallback={<Loader />}>
         <Outlet/> 
+        </Suspense>
       </div>
     )
   }

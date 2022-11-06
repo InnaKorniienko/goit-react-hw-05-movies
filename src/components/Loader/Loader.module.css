@@ -19,7 +19,7 @@
     border-radius: 50%;
     border-left: 50%;
     border-left-color: #fff;
-    animation: loader 1.3s linear infinite;
+    animation: loader 2.0s linear infinite;
 }
 
 @keyframes loader {
